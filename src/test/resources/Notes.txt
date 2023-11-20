@@ -1,0 +1,19 @@
+
+Serialization
+
+ObjectMapper used to convert object to string bytes
+
+@JsonIgnoreProperties({"",""}) -> Used to ignore multiple properties
+@JsonIgnore -> To ignore single property
+@JsonPropertyOrder({"",""}) -> To order the sequence of property
+@JsonRootName(value = "employee") [Class level] -> To define the root of json response
+
+Gson -> toJson -> fromJson
+
+
+JsonSchemaValidator -> To validate the API response schema with the expected JSON file
+MatcherAssert.assertThat -> Using hamcrest validate the json schema
+
+Compare two JSON
+Using objectMapper.readTree() method
+
