@@ -128,6 +128,13 @@
             <version>1.18</version>
         </dependency>
 
+        <!-- Slack notifications -->
+        <dependency>
+            <groupId>com.slack.api</groupId>
+            <artifactId>slack-api-client</artifactId>
+            <version>1.36.1</version>
+        </dependency>
+
 
     </dependencies>
 </project>
