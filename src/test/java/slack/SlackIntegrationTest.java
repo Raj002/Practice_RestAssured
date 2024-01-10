@@ -17,7 +17,7 @@ import java.util.List;
 public class SlackIntegrationTest {
 
     private static final String slackChannelId = "C06500TTZ0S";
-    private static final String oAuthToken = "xoxb-6169917447459-6278571299890-9ozcXDqJv8uKZtBvA3YEBMj1";
+    private static final String oAuthToken = "";
 
     public static void main(String[] args) {
         System.out.println("Before");
@@ -83,14 +83,14 @@ public class SlackIntegrationTest {
                 BlockCompositions.markdownText("*Requested spread to RR:* 0 bps")
         )));
 
-        LayoutBlock actionButtonBlock = Blocks.actions(Arrays.asList(
-                ButtonElement.builder()
-                        .text(BlockCompositions.plainText("View Order"))
-                        .style("primary")
-                        .value("view order")
-                        .url("https://dev-swaps-frontend-gateway-service.co.clearstreet.io/pricing-request/6")
-                        .build()
-        ));
+//        LayoutBlock actionButtonBlock = Blocks.actions(Arrays.asList(
+//                ButtonElement.builder()
+//                        .text(BlockCompositions.plainText("View Order"))
+//                        .style("primary")
+//                        .value("view order")
+//                        .url("https://dev-swaps-frontend-gateway-service.co.clearstreet.io/pricing-request/6")
+//                        .build()
+//        ));
 
         return Arrays.asList(messageSection, headerSection, dividerBlock1, informationSection, additionalInformationSection);
     }
