@@ -8,9 +8,7 @@ import com.slack.api.methods.response.chat.ChatPostMessageResponse;
 import com.slack.api.model.block.Blocks;
 import com.slack.api.model.block.LayoutBlock;
 import com.slack.api.model.block.composition.BlockCompositions;
-import com.slack.api.model.block.composition.MarkdownTextObject;
 import com.slack.api.model.block.composition.PlainTextObject;
-import com.slack.api.model.block.element.ButtonElement;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -85,14 +83,14 @@ public class SlackIntegrationTest {
                 BlockCompositions.markdownText("*Requested spread to RR:* 0 bps")
         )));
 
-//        LayoutBlock actionButtonBlock = Blocks.actions(Arrays.asList(
-//                ButtonElement.builder()
-//                        .text(BlockCompositions.plainText("View Order"))
-//                        .style("primary")
-//                        .value("view order")
-//                        .url("https://dev-swaps-frontend-gateway-service.co.clearstreet.io/pricing-request/6")
-//                        .build()
-//        ));
+        LayoutBlock actionButtonBlock = Blocks.actions(Arrays.asList(
+                ButtonElement.builder()
+                        .text(BlockCompositions.plainText("View Order"))
+                        .style("primary")
+                        .value("view order")
+                        .url("https://dev-swaps-frontend-gateway-service.co.clearstreet.io/pricing-request/6")
+                        .build()
+        ));
 
         return Arrays.asList(messageSection, headerSection, dividerBlock1, informationSection, additionalInformationSection);
     }
